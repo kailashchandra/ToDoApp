@@ -1,0 +1,32 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TO-Do List</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+    <script src="TODOController.js"></script>
+    <style>
+        span.true {
+                color: grey;
+                font-style: italic;
+                text-decoration: line-through;
+            }
+    </style>
+</head>
+
+<body ng-app="TODOApp" ng-controller="TODOCntl">
+    <h1 style="text-align: center">Add A Task</h1>
+    <input ng-model="task" ng-keyup="searchEnter()" type="text" style="display:block; margin:0 auto;padding: 5px;font-size: 15px; width: 300px;">
+    <div>
+        <ul>
+            <li ng-repeat="thing in tasks track by $index">
+                <input type="checkbox" ng-model="thing.status" ng-click="addTask2(thing, $index)" />
+                <span contenteditable="false" ng-model="thing.message" ng-dblclick="edit()" ng-keydown="enterAgain(thing, $index)" class="{{thing.status}}">
+                    {{thing.message}}</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
