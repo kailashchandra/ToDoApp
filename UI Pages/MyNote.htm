@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="MyNote.js"></script>
+    </head>
+    <body>
+        <div ng-app="MyNote" ng-controller="myctl">
+            <textarea ng-model="message" cols="30" rows="10"></textarea>
+            <button ng-click="save()">Save</button>
+            <button ng-click="clear()">Clear</button>
+            <span>No of Character left {{100-message.length}}</span>
+        </div>
+        
+    </body>
+</html>

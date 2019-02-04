@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="myangular.js"></script>
+    </head>
+    <body>
+        <div ng-app="shoppingList" ng-controller="myctrl"> <!--style="box-shadow:0 6px 19px 0 rgba(0,0,0,0.16),0 2px 10px 0
+         rgba(0,0,0,0.12); margin: 16px  ; max-width:400px;">margin: !important
+         <headeer><h3 style="font-size:24px; font-family:Segoe UI; font-weight:400; margin:10px 0">Shopping List</h3></headeer> header display:block-->
+            <!-- rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)" -->
+            <h3>Shopping List</h3>
+            <ul>
+                <li ng-repeat="x in items">{{x}}    <span style="cursor:pointer;" ng-click="removeItem($index)">&times;</span></li>
+            </ul> 
+            <input type="text" ng-model="item" name={{item}} />
+            <button ng-click="addItem()">ADD</button><p>{{errortext}}</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="toDoList.js"></script>
+    </head>
+    <body>
+        <div ng-app="toDoList" ng-controller="myctl">
+            <h4>To Do List</h4>
+            <input type="text" placeholder="Add new" ng-model="item">
+            <button ng-click="addItem()">Add New</button><h1>{{errortext}}</h1>
+            <ul>
+                <li ng-repeat="x in items"> <input type="checkbox" ng-model="x.status"/> {{x.text}}</li>
+            </ul>
+            <input type="submit" value="Remove" ng-click=removeItem(x)></input>
+        </div>
+    </body>
+</html>
