@@ -1,0 +1,49 @@
+/*To make responsive first thing to do is default body*/
+body{
+    margin: 0;
+}
+
+ul.topnav {
+    list-style-type: none;
+    /*To make full lenth and menu do default with margin and padding*/
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top:0;
+}
+
+ul.topnav li{
+    /*display: inline;*/
+    float: left;
+}
+
+ul.topnav li a{
+    padding: 14px 16px;
+    color: white;
+    display: block;
+    text-decoration: none;
+    /*border-right: 1px solid #bbb;*/
+}
+
+li a:hover{
+    background-color: #111111;
+}
+
+.active{
+    background-color: green;
+}
+
+li:last-child{
+    border: none;
+}
+
+ul.topnav li.right{float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right,
+    ul.topnav li {float: none;
+    text-align: center;}
+}

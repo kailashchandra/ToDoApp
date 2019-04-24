@@ -1,0 +1,46 @@
+body{
+    margin:0;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+    background-color: lightgrey;
+   /* border: 1px solid #555;*/
+}
+/*li{
+    text-align: center;
+    border-bottom: 1px solid #555;
+}*/
+/*li :last-child{
+    border-bottom: none;
+}*/
+
+li a {
+    display: block;
+    padding: 8px 20px;
+    
+    color: black;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color:black;
+    color: white;
+}
+
+li a.active{
+    background-color: green;
+    color:white;
+}
+
+li a:hover:not(.active){
+    background-color:#555;
+    color: white;
+}
+
+
